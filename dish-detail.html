@@ -5,13 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/detail.css">
+	<script src="js/data.js" defer></script>
 	<script src="js/script.js" defer></script>
-	<title>Don Voyage</title>
+	<title>La Campaneta</title>
 </head>
-<body>
+<body onload="loadDishDetail()">
 	<header>
 		<button type="button" id="nav-button" onclick="toggleNav()"><span class="material-icons md-36">menu</span></button>
-		<h1><a href="index.html">Don Voyage</a></h1>
+		<h1><a href="index.html">La Campaneta</a></h1>
 		<div class="single-image-wrapper"><img src="img/site/shield.svg" alt="Escudo de Orihuela"></div>
 	</header>
 	<nav>
@@ -22,9 +24,21 @@
 		</ul>
 	</nav>
 	<main>
-		<h2 id="dish-title"></h2>
-		<p id="desc"></p>
-		<div id="main-image-wrapper" class="single-image-wrapper"><img src="" alt=""></div>
+		<section>
+			<div id="main-image-wrapper" class="single-image-wrapper"><img src="" alt=""></div>
+			<div>
+				<h2 id="name"></h2>
+				<span id="desc"></span>
+				<span id="rating"></span>
+			</div>
+		</section>
+		<section>
+			<h2>Receta</h2>
+			<article>
+				<span id="ingredients"><h3>Ingredientes</h3></span>
+				<span id="instructions"><h3>Instrucciones</h3></span>
+			</article>
+		</section>
 	</main>
 	<aside>
 		<h3>Puedes vernos en:</h3>
@@ -36,7 +50,7 @@
 		<p>Formulario aquí...</p>
 	</aside>
 	<footer>
-		<span>Don Voyage</span>
+		<span>La Campaneta web</span>
 		<span>&copy; 2022 por Jesús Fernández Vidal (1º CFGS K)</span>
 		<span>
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">

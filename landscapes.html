@@ -6,13 +6,14 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/gallery.css">
+	<script src="js/data.js" defer></script>
 	<script src="js/script.js" defer></script>
-	<title>Don Voyage</title>
+	<title>La Campaneta</title>
 </head>
-<body>
+<body onload="loadLandscapes()">
 	<header>
 		<button type="button" id="nav-button" onclick="toggleNav()"><span class="material-icons">menu</span></button>
-		<h1>Don Voyage</h1>
+		<h1>La Campaneta</h1>
 		<div class="single-image-wrapper"><img src="img/site/shield.svg" alt="Escudo de Orihuela"></div>
 	</header>
 	<nav>
@@ -25,31 +26,8 @@
 	<main>
 		<section>
 			<h2>Paisajes</h2>
-			<div class="gallery-wrapper">
-				<article onclick="goToImgDetail(this)">
-					<div class="image-wrapper"><img src="img/landscapes/default.jpg" alt="Imagen por defecto"></div>
-					<div class="image-info"><span class="image-title">Imagen 1</span></div>
-				</article>
-				<article onclick="goToImgDetail(this)">
-					<div class="image-wrapper"><img src="img/landscapes/default.jpg" alt=""></div>
-					<div class="image-info"><span class="image-title">Imagen 2</span></div>
-				</article>
-				<article onclick="goToImgDetail(this)">
-					<div class="image-wrapper"><img src="img/landscapes/default.jpg" alt=""></div>
-					<div class="image-info"><span class="image-title">Imagen 3</span></div>
-				</article>
-				<article onclick="goToImgDetail(this)">
-					<div class="image-wrapper"><img src="img/landscapes/default.jpg" alt=""></div>
-					<div class="image-info"><span class="image-title">Imagen 4</span></div>
-				</article>
-				<article onclick="goToImgDetail(this)">
-					<div class="image-wrapper"><img src="img/landscapes/default.jpg" alt=""></div>
-					<div class="image-info"><span class="image-title">Imagen 5</span></div>
-				</article>
-				<article onclick="goToImgDetail(this)">
-					<div class="image-wrapper"><img src="img/landscapes/default.jpg" alt=""></div>
-					<div class="image-info"><span class="image-title">Imagen 6</span></div>
-				</article>
+			<div id="landscapes-container" class="gallery-wrapper">
+				
 			</div>
 		</section>
 	</main>
@@ -63,7 +41,7 @@
 		<p>Formulario aquí...</p>
 	</aside>
 	<footer>
-		<span>Don Voyage</span>
+		<span>La Campaneta web</span>
 		<span>&copy; 2022 por Jesús Fernández Vidal (1º CFGS K)</span>
 		<span>
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
