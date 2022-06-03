@@ -37,7 +37,7 @@ function loadLandscapes() {
 		content = `
 			<article id="${id}" onclick="goToImgDetail(this)">
 				<div class="image-wrapper"><img src="${src}" alt="${name}"></div>
-				<div class="article-info"><h3 class="article-title">${name}</h3></div>
+				<div class="article-info"><h3 class="article-name">${name}</h3></div>
 			</article>
 		`;
 		container.innerHTML += content;
@@ -85,7 +85,7 @@ function loadDishes() {
 			<article id="${id}" onclick="goToDishDetail(this)">
 				<div class="image-wrapper"><img src="${src}" alt="${name}"></div>
 				<div class="article-info">
-					<h3 class="article-title">${name}</h3>
+					<h3 class="article-name">${name}</h3>
 					<span class="article-desc">${desc}</span>
 					<span class="article-rating with-icon">Valoración: ${stars}</span>
 				</div>
@@ -119,8 +119,8 @@ function loadDishDetail() {
 	document.getElementById('name').innerHTML = name;
 	document.getElementById('desc').innerHTML = desc;
 	document.getElementById('rating').innerHTML = rating;
-	document.getElementById('ingredients').innerHTML = ingredients;
-	document.getElementById('instructions').innerHTML = instructions;
+	document.getElementById('ingredients').innerHTML += ingredients;
+	document.getElementById('instructions').innerHTML += instructions;
 }
 
 // Devuelve el HTML con el número indicado de estrellas
@@ -137,10 +137,22 @@ function generateDishStars(rating) {
 
 // Devuelve el HTML de los ingredientes
 function generateDishIngredients(ingredients) {
-	return "TODO";
+	let output;
+	output = `<ul>`;
+	for (let ingredient of ingredients) {
+		output += `<li>${ingredient.innerHTML}</li>`;
+	}
+	output += `</ul>`;
+	return output;
 }
 
 // Devuelve el HTML de las instrucciones
 function generateDishInstructions(instructions) {
-	return "TODO";
+	let output;
+	output = `<ol>`;
+	for (let p of instructions) {
+		output += `<li>${p.innerHTML}</li>`
+	}
+	output += `</ol>`;
+	return output;
 }

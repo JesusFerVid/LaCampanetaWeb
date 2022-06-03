@@ -14,6 +14,36 @@ h2 {
 	margin-bottom: 20px;
 }
 
+h3 {
+	margin-bottom: 10px;
+}
+
+p {
+	margin-bottom: 6px;
+}
+
+/* Corregir desplazamiento inesperado de las viñetas y números de lista */
+ul, ol {
+	padding-left: 17px;
+}
+
+figure {
+	margin: 20px 0px;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+}
+	figure > img {
+		max-width: 60%;
+	}
+
+	figure > figcaption {
+		margin-top: 6px;
+		font-size: 0.8em;
+		font-style: italic;
+		color: var(--text-color-dim);
+	}
+
 .with-icon {
 	display: inline-flex;
 	align-items: center;
@@ -94,12 +124,12 @@ nav {
 
 main {
 	grid-area: main;
-	background-color: chocolate;
+	background-color: var(--green-50);
 }
 
 aside {
 	grid-area: aside;
-	background-color: blueviolet;
+	background-color: var(--brown-50);
 }
 
 	aside > ul {

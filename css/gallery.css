@@ -7,6 +7,7 @@
 	.gallery-wrapper > article {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		gap: 10px;
 		padding: 10px;
 		background-color: white;
@@ -46,6 +47,7 @@
 	.gallery-wrapper.wide > article {
 		max-height: 240px;
 		flex-direction: row;
+		justify-content: flex-start;
 	}
 
 		.gallery-wrapper.wide > article > .image-wrapper{

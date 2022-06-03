@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/gallery.css">
+	<link rel="stylesheet" href="css/form.css">
 	<script src="js/data.js" defer></script>
 	<script src="js/script.js" defer></script>
 	<title>La Campaneta</title>
@@ -25,8 +26,20 @@
 	</nav>
 	<main>
 		<section>
-			<h2>Paisajes</h2>
-			
+			<h2>Portada</h2>
+			<p>Bienvenidos a La Campaneta, una pedanía de Orihuela, en la provincia de Alicante. Limitamos con La Media Legua, San Bartolomé, Molins y Orihuela.</p>
+			<p>No somos un pueblo con muchos habitantes, tenemos entre 1000 y 2000. Tampoco tenemos cine, ni biblioteca, ni siquiera ayuntamiento. Pero tenemos colegio, mercado, restauración...</p>
+			<figure>
+				<img src="img/site/colegio.png" alt="Colegio Ntra. Sra. del Pilar">
+				<figcaption>Colegio Ntra. Sra. del Pilar</figcaption>
+			</figure>
+			<p>Ah, sí, también tenemos verde... mucho, mucho verde...</p>
+			<figure>
+				<img src="img/site/campaneta.jpg" alt="Vista de La Campaneta">
+				<figcaption>La Campaneta desde fuera</figcaption>
+			</figure>
+			<p>La Campaneta es un pueblo que a priori parece pequeño, pero en realidad no es que sea pequeño, es que no está muy urbanizado. Se respeta el campo, con lo cual conseguimos un lugar en el que reina la tranquilidad y que sin duda entra por los ojos.</p>
+			<p>Sólo mira las imágnes que podrás encontrar en la sección de Paisajes y comprenderás a qué me refiero.</p>
 		</section>
 	</main>
 	<aside>
@@ -36,7 +49,24 @@
 			<li><a href="https://goo.gl/maps/mHKJ2kc1EsJFAvUY7" class="with-icon"><span class="material-icons">place</span>Google Maps</a></li>
 		</ul>
 		<h3>¿Hechas algo en falta?</h3>
-		<p>Formulario aquí...</p>
+		<form method="post">
+			<div class="text-group">
+				<input type="text" name="sender" id="sender" placeholder="Escriba su nombre" required>
+				<label for="sender">Nombre</label>
+			</div>
+			<div class="text-group">
+				<input type="text" name="subject" id="subject" placeholder="Escriba el asunto" required>
+				<label for="subject">Nombre</label>
+			</div>
+			<div class="text-group">
+				<textarea type="text" name="comment" id="comment" placeholder="Escriba su mensaje" required></textarea>
+				<label for="comment">Nombre</label>
+			</div>
+			<div class="buttons-group">
+				<input type="reset" value="BORRAR CAMPOS">
+				<input type="submit" value="ENVIAR">
+			</div>
+		</form>
 	</aside>
 	<footer>
 		<span>La Campaneta web</span>

@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/detail.css">
+	<link rel="stylesheet" href="css/form.css">
 	<script src="js/data.js" defer></script>
 	<script src="js/script.js" defer></script>
 	<title>La Campaneta</title>
@@ -24,15 +25,15 @@
 		</ul>
 	</nav>
 	<main>
-		<section>
+		<section class="dish-header">
 			<div id="main-image-wrapper" class="single-image-wrapper"><img src="" alt=""></div>
-			<div>
+			<div class="dish-info">
 				<h2 id="name"></h2>
 				<span id="desc"></span>
 				<span id="rating"></span>
 			</div>
 		</section>
-		<section>
+		<section class="dish-recipe">
 			<h2>Receta</h2>
 			<article>
 				<span id="ingredients"><h3>Ingredientes</h3></span>
@@ -47,7 +48,24 @@
 			<li><a href="https://goo.gl/maps/mHKJ2kc1EsJFAvUY7" class="with-icon"><span class="material-icons">place</span>Google Maps</a></li>
 		</ul>
 		<h3>¿Hechas algo en falta?</h3>
-		<p>Formulario aquí...</p>
+		<form method="post">
+			<div class="text-group">
+				<input type="text" name="sender" id="sender" placeholder="Escriba su nombre" required>
+				<label for="sender">Nombre</label>
+			</div>
+			<div class="text-group">
+				<input type="text" name="subject" id="subject" placeholder="Escriba el asunto" required>
+				<label for="subject">Nombre</label>
+			</div>
+			<div class="text-group">
+				<textarea type="text" name="comment" id="comment" placeholder="Escriba su mensaje" required></textarea>
+				<label for="comment">Nombre</label>
+			</div>
+			<div class="buttons-group">
+				<input type="reset" value="BORRAR CAMPOS">
+				<input type="submit" value="ENVIAR">
+			</div>
+		</form>
 	</aside>
 	<footer>
 		<span>La Campaneta web</span>

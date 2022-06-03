@@ -1,1 +1,33 @@
-/* Dish detail */
+.image-info {
+	margin-top: 10px;
+}
+
+.dish-header {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+}
+	.dish-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 10px;
+	}
+
+		.dish-info > h2 {
+			margin-bottom: 0px;
+		}
+
+		.dish-recipe li {
+			margin-bottom: 6px;
+		}
+
+		#instructions > h3{
+			margin-top: 20px;
+		}
+
+@media only screen and (min-width: 992px) {
+	.dish-header {
+		grid-template-columns: 300px 1fr;
+	}
+}
